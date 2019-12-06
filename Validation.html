@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Valiadations</title>
+	<script type="text/javascript">
+		document.write("<h2>Basic Valiadations</h2>");
+		function validate() {
+			var userName = document.getElementById("name");
+			var password = document.getElementById("pass");
+			if(userName.value.trim() ==  "" || password.value.trim() == "") {
+				alert("oops!!!! please Enter something from next time ");
+				return false;
+			}
+			else {
+				return true;
+			}
+		}
+	</script>
+</head>
+<body>
+	<form onsubmit="return validate()" action="RedirectedPage.html">
+		<input id="name" type="text" placeholder="User Name"/>
+		<br><br>
+		<input id="pass" type="password" placeholder="Password"/>
+		<br><br>
+		<button type="submit">submit</button>
+	</form>
+</body>
+</html>

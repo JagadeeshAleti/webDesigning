@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RadioButton</title>
+	<script type="text/javascript">
+		document.write("<h2>Radio_Button</h2>");
+		function check() {
+			var select1 = document.getElementById("rd1");
+			var select2 = document.getElementById("rd2");
+			if(rd1.checked == true) {
+				alert("Your are selcted "+rd1.value+" channel");
+			}
+			else if(rd2.checked == true) {
+				alert("Your are selcted "+rd2.value+" channel");
+			}
+			else {
+				alert("No channel is selected!!!!");
+			}
+
+		}
+	</script>
+</head>
+<body>
+	<!-- if name of two button's are same then you can select the any of the button among them at a time otherwise you can select the multiple buttons at a time -->
+	<input id="rd1" type="radio" name="grp1" value="Simple_Snippets">SimpleSnippets</input>
+	<br> <br>
+	<input id="rd2" type="radio" name="grp1" value="Telusko_Learnings">TeluskoLearnings</input>
+	<br> <br>
+	<button onclick="check()">ClickHere</button>
+</body>
+</html>

@@ -1,0 +1,24 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<title>OnMouse_Over and OnMouse_out</title>
+ 	<style>
+		.marginauto {
+    		margin: 10px auto 20px;
+    		display: block;
+		}
+	</style>
+ 	<script type="text/javascript">
+ 		document.write("<h1>Iamge Modifying Attributes</h1>");
+ 		function mouseOver() {
+ 			document.getElementById("img").src = "/home/jagadeesh/Downloads/jagadeesh.jpg";
+ 		}
+ 		function mouseOut() {
+ 			document.getElementById("img").src = "/home/jagadeesh/Downloads/eswar.png";
+ 		}
+ 	</script>
+ </head>
+ <body>
+ 	<img id="img" class="marginauto" onmouseover="mouseOver()" onmouseout="mouseOut()" src="/home/jagadeesh/Downloads/nivas.png" width="300px" align="middle" />
+ </body>
+ </html>

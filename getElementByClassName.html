@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>getElementByClassName</title>
+	<script type="text/javascript">
+		document.write("<h1>getElementsByClassName</h1>");
+		function changeStyle() {
+			var element = document.getElementsByClassName("myparagraph");
+			for(var i=0 ; i<element.length ; i++) {
+				element[i].style.color = "green";
+				element[i].style.fontStyle = "italic";
+				element[i].style.fontWeight = "bold";
+			}
+		}
+	</script>
+</head>
+<body>
+	<!--
+		getElementId(No two id r same): To identify one HTML element uniquely; 
+		getElementsByTagName   : To identify a HTML elements of same Tag type;
+		getElementsByClassName : To identify  HTML elements of different type;
+	-->
+	<p class="myparagraph">Hai jagadeesh,How are you</p>
+	<p>He i think you are wrong</p>
+	<p class="myparagraph">This is the telusko learnings</p>
+	<p>Teached by Tanmay Sakpal</p>
+	<p class="myparagraph">Js is leading in market!!!HurryUp</p>
+	<br>
+	<a class="myparagraph" href="https://www.youtube.com/">This is a link to register</a>
+	<br><br>
+	<button onclick="changeStyle()">ClickHere</button>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>getElementsByTagName</title>
+	<script type="text/javascript">
+		function changeAttributes() {
+			var array =  document.getElementsByTagName("p");
+			array[0].style.fontStyle = "italic";
+			array[1].style.color  = "green";
+			array[2].style.fontWeight = "bold";
+			array[3].style.backgroundColor = "grey";
+			array[2].style.fontStyle = "italic";
+		}
+	</script>
+</head>
+<body>
+	<p>Hai jagadeesh,How are you</p>
+	<p>He i think you are wrong</p>
+	<p>This is the telusko learnings</p>
+	<p>Teached by Tanmay Sakpal</p>
+	<br>
+	<button onclick="changeAttributes()">clickHere</button>
+</body>
+</html>

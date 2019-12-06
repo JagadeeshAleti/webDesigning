@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>getElementById</title>
+	<script type="text/javascript">
+		document.write("<h1>getElementById</h1>");
+		document.write("<h2>we have to change the content of html document by getElementById</h2>");
+		function modify() {
+			document.getElementById("demo").innerHTML = "The content of HTML changed successfully!!!!";
+		}
+	</script>
+</head>
+<body>
+	<h3 id="demo">Hai Welcome to Javascript</h3>
+	<button onclick="modify()">ClickThis</button>
+
+</body>
+</html>

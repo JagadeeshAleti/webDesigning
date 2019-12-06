@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>getElementsByTagName</title>
+	<script type="text/javascript">
+		function changeAttributes() {
+			var array =  document.getElementsByTagName("p");
+			for(var i=0 ; i<array.length ;i++) {
+				array[i].style.color = "red";
+			}
+		}
+	</script>
+</head>
+<body>
+	<p>Hai jagadeesh,How are you</p>
+	<p>He i think you are wrong</p>
+	<p>This is the telusko learnings</p>
+	<p>Teached by Tanmay Sakpal</p>
+	<br>
+	<button onclick="changeAttributes()">clickHere</button>
+</body>
+</html>

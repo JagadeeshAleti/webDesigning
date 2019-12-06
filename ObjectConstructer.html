@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ObjectConstructer</title>
+	<script type="text/javascript">
+		document.write("<h1>Object creation through constructor</h1>");
+		function Cars(carBrand,carModel,carPrice) {
+			this.carBrand = carBrand;
+			this.carPrice = carPrice;
+			this.carModel = carModel;
+
+			this.specialFunction = function() {
+				return "Drvingless car";
+			}
+		}
+
+		document.write("<h1>Tesla Details</h1>");
+		var obj = new Cars("Tesla",1000000,"Lexii");
+		document.write("<h2>"+obj.carBrand+"</h2>");
+		document.write("<h2>"+obj.carPrice+"</h2>");
+		document.write("<h2>"+obj.carModel+"</h2>");
+		document.write("<h2>"+obj.specialFunction()+"</h2>");
+
+		document.write("<h1>Fortuner Details</h1>");
+		var obj1 = new Cars("Fortuner",400000,"Ninja");
+		document.write("<h2>"+obj1.carBrand+"</h2>");
+		document.write("<h2>"+obj1.carPrice+"</h2>");
+		document.write("<h2>"+obj1.carModel+"</h2>");
+		document.write("<h2>"+obj1.specialFunction()+"</h2>");		
+	</script>
+</head>
+<body>
+
+</body>
+</html>

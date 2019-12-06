@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Array</title>
+	<script type="text/javascript">
+		document.write("<h2>Arrays</h2>");
+		//var Brother = ["Jagadeesh","Eswar","Srinu"];	
+		var Brother = new Array("Jagadeesh","Eswar","Srinu",);
+		Brother.push("Sankar");
+		Brother.push(4);
+
+		document.write("<h1>The Three Brothers are : </h1>");
+		for(var i=0 ; i<Brother.length ; i++) {
+			document.write("<h2>"+Brother[i]+"</h2>");
+		}
+
+		Brother.pop(); // Pop method in js always removes last element by default
+		document.write("<h2>Array after popping elements : </h2>");
+		for(var i=0 ; i<Brother.length ; i++) {
+			document.write("<h2>"+Brother[i]+"</h2>");
+		}
+
+		Brother.pop();
+		document.write("<h2>Array after popping elements : </h2>");
+		for(var i=0 ; i<Brother.length ; i++) {
+			document.write("<h2>"+Brother[i]+"</h2>");
+		}
+	</script>
+</head>
+<body>
+
+</body>
+</html>

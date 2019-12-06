@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ValiadationsEample2</title>
+	<script type="text/javascript">
+		document.write("<h2>Basic Valiadations</h2>");
+		function validate() {
+			var userName = document.getElementById("name");
+			var password = document.getElementById("pass");
+			if(userName.value.trim() ==  "") {
+				alert("Enter something");
+				userName.style.border = "solid 2px red";
+				document.getElementById("userLabel").style.visibility = "visible";
+				return false;
+			}
+			else if(password.value.trim() == "") {
+				alert("Enter something");
+				return false;
+			}
+			else if(password.value.trim().length < 5) {
+				alert("Password too short");
+				return false;
+			}
+			else if(password.value.trim().length > 15) {
+				alert("Password length exceeds");
+				return false;
+			}
+			else {
+				return true;
+			}
+		}
+	</script>
+</head>
+<body>
+	<form onsubmit="return validate()" action="RedirectedPage.html">
+		<input id="name" type="text" placeholder="User Name"/>
+		<label id="userLabel" style="color:red;visibility:hidden;">Invalid</label>
+		<br><br>
+		<input id="pass" type="password" placeholder="Password"/>
+		<br><br>
+		<button type="submit">submit</button>
+	</form>
+</body>
+</html>

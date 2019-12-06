@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>UserInput</title>
+	<script type="text/javascript">
+		function findUser() {
+			var user1 = document.getElementById("User1").value;
+			var user2 = document.getElementById("User2").value;
+			if(user1 == user2)  {
+				document.write("<h2>I wont give permission because two users are same</h2>");
+			}
+			else {
+				document.write("<h2>Both the Users are Elegible to work with this project</h2> ");
+			}
+		}
+	</script>
+</head>
+<body>
+	<input id="User1" placeholder="Enter Name :">
+	<br>
+	<br>
+	<input id="User2" placeholder="Enter Name :">
+	<br>
+	<br>
+	<button onclick="findUser()">Click here to check status</button>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>VariableScope</title>
+	<script type="text/javascript">
+		document.write("<h2>Global and Local Variable</h2>");
+		var a=10; //Globa;
+
+		function print() {
+			b=10; //Globa , without var ,all are golbal by default 
+			var a = 20; //Local
+			return a;
+		}
+		document.write("<h2>The value of a is : "+print()+"</h2>");
+		document.write("<h2>The value of b is : "+b+"</h2>");
+	</script>
+</head>
+<body>
+
+</body>
+</html>

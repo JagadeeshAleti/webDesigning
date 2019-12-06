@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Select</title>
+	<script type="text/javascript">
+		document.write("<h1>DOM Manipulation - Select</h1>");
+		function check() {
+			var var1 = document.getElementById("grp1");
+			alert("You are applied for : "+var1.options[var1.selectedIndex].value);
+		}
+	</script>
+</head>
+<body>
+	<select id="grp1">
+		<option value="Defence">Army</option>
+		<option value="Navy">Navy</option>
+		<option value="AirForce">AirForce</option>
+	</select>
+	<br><br>
+	<button onclick="check()">ClickHere</button>
+</body>
+</html>
