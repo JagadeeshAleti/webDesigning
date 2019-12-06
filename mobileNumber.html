@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mobile Number Validation </title>
+	<script type="text/javascript">
+		document.write("<h2>Mobile Number validations </h2>");
+		/* 	   \d : [0-9]
+			   \w : (a-z,A-Z,0-9&_)
+			   \s : space and tabs
+			   \t : only tab
+
+		*/
+		function validate() {
+			var text = document.getElementById("number");
+			var regx = /^[7-9][0-9]{9}$/;	//^[7-9]\d{9}$ = ^[7-9][0-9]{9}$
+			/*
+				^[7-9] : Start with 7,8,9
+				[^7-9] : Don't start with 7,8,9
+				[0]$   : End with zero
+			*/
+			if(regx.test(text)) {
+				document.getElementById("numberLabel").innerHTML = "Valid";
+				document.getElementById("numberLabel").style.visibility = "visible";
+				document.getElementById("numberLabel").style.color = "green";
+
+			}
+			else {
+				document.getElementById("numberLabel").style.visibility = "visible";
+				document.getElementById("numberLabel").style.color = "red";
+			}
+		}
+	</script>
+</head>
+<body>
+	<input id="number" type="text" placeholder="Mobile Number : " >
+	<br>
+	<label id="numberLabel" style="color: red;visibility: hidden;">Invalid</label>
+	<br><br>
+	<button onclick="validate()" type="button">submit</button>
+</body>
+</html>
