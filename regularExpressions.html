@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RegularExpressions</title>
+	<script type="text/javascript">
+		document.write("<h2>RegularExpressions</h2>");
+		function validate() {
+			var userName  = document.getElementById("name");
+			var regx = /E00/	// /E00/i --> Do not case sensetive
+			if(regx.test(userName)) {
+				//test return true if regx found in userName 
+				alert("valid");
+			}
+			else {
+				alert("Invalid");
+				userName.style.border = "solid 2px red";
+				document.getElementById("userLabel").style.visibility = "visible";
+			}
+		}
+	</script>
+</head>
+<body>
+	<form action="default.html">
+		<input id="name" type="text" placeholder="user Name">
+		<label id="userLabel" style="color: red;visibility: hidden;">Inavalid User Name</label>
+		<br><br>
+		<button onclick="validate()" type="button">Submit</button>
+	</form>
+</body>
+</html>
