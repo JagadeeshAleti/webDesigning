@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gmail validation</title>
+	<script type="text/javascript">
+		document.write("<h2>Gmail validation</h2>");
+		function validate() {
+			var text = document.getElementById("mail").value;
+			// [1.2] means 1@2, 1hai2,1-fefdws2@2like this to avoid use \
+			// /^([a-z A-Z 0-9\.-]+)@([a-z 0-9 -]+).([a-z]{2,})(.[a-z]{2,})?$ 
+			// ? indicates (.[a-z]{2,}) part is optional
+			var regx = /^([a-z A-Z 0-9\.-]+)@([a-z 0-9 -]+).([a-z]{2,})(.[a-z]{2,})?$/
+			if(regx.test(text)) {
+				document.getElementById("mailLabel").innerHTML = "Valid";
+				document.getElementById("mailLabel").style.visibility = "visible";
+				document.getElementById("mailLabel").style.color = "green";
+			}
+			else {
+				document.getElementById("mailLabel").innerHTML = "Invalid";
+				document.getElementById("mailLabel").style.visibility = "visible";
+				document.getElementById("mailLabel").style.color = "red";
+			}
+		}
+	</script>
+</head>
+<body>
+	<form>
+		<input id="mail" type="text" placeholder="E-mail">
+		<br>
+		<label id="mailLabel" style="color: red;visibility: hidden">Invalid</label>
+		<br>
+		<button onclick="validate()" type="button">submit</button>
+	</form>
+</body>
+</html>
