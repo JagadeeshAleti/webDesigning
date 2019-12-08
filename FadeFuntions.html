@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fade Funtions</title>
+	<script type="text/javascript">
+		var opacity = 0;
+		var interval = 0;
+		
+		function fadeOut() {
+			interval = setInterval(hide,1000);
+		}
+
+		function fadeIn() {
+			interval = setInterval(show,1000);
+		}
+		function hide() {
+			var img1 = document.getElementById("img");
+			opacity = Number(window.getComputedStyle(img1).getPropertyValue("opacity"));
+			if(opacity>0){
+				opacity -= 0.1;
+				img.style.opacity = opacity;
+			}
+			else {
+				clearInterval(interval);
+			}
+
+		}
+
+		function show() {
+			var img1 = document.getElementById("img");
+			opacity = Number(window.getComputedStyle(img1).getPropertyValue("opacity"));
+			if(opacity<1){
+				opacity += 0.1;
+				img.style.opacity = opacity;
+			}
+			else {
+				clearInterval(interval);
+			}
+		}
+	</script>
+</head>
+<body>
+	<button onclick="fadeOut()" id="out">FadeOut</button>
+	<br><br>
+	<img src="/home/jagadeesh/Downloads/eswar.png" width="300" id="img"> 
+	<br><br>
+	<button onclick="fadeIn()" id="in">FadeIn</button>
+</body>
+</html>
