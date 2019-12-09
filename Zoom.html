@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ZoomIn and Out</title>
+	<script type="text/javascript">
+		var width = 100;
+		var difference = 2;
+		var ID = 0;
+		function increase() {
+			clearInterval(ID);
+			ID = setInterval(zoomIn,20);
+		}
+		function decrease() {
+			clearInterval(ID);
+			ID = setInterval(zoomOut,20);
+		}
+		function zoomIn() {
+			if(width<200) {
+				width += difference;
+				document.getElementById("img").style.width = width;
+			}
+			else {
+				clearInterval(ID);
+			}
+		}
+		function zoomOut() {
+			if(width>100) {
+				width -= difference;
+				document.getElementById("img").style.width = width;
+			}
+			else {
+				clearInterval(ID);
+			}
+		}
+	</script>
+</head>
+<body>
+	<br><br>
+	<img id="img" src="/home/jagadeesh/Downloads/nivas.png" onmouseover="increase()" onmouseout="decrease()" width="100" />
+</body>
+</html>
