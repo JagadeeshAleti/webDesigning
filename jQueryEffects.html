@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>jQuery Selectors @</title>
+	<title>jQuery Effects</title>
 	<link rel="stylesheet" type="text/css" href="css/jQuerySelectors.css">
-	<h1>jQuery Selectors</h1>
+	<h1>jQuery Effects</h1>
 </head>
 <body>
 
+	<button id="b1" >Button1</button>
+	<button id="b2">Button2</button>
+	<button id="b3">Toggle</button>
+	
 	<h3>This is a paragraph outside the divison</h3>
 	
 	<p style="color: green">First paragraph</p>
@@ -37,26 +41,23 @@
 		<li>Fourth Item</li>
 	</div>
 	<br>
-	<button id="b1" >Button1</button>
-	<button id="b2">Button2</button>
 		
 </body>
 <script type="text/javascript" src="jQuery.js"></script>
 <script type="text/javascript">
-	$(document).ready(function() {	// ready function do thing when all the contents of file are loaded
-		// $("button").click(fn1);
-		$("#b1").mouseenter(fn1);
-		// $("#b1").mouseleave(fn2);
-		$("#b2").mouseenter(fn2);
+	$(document).ready(function() {
+		$("#b1").click(function() {
+			$("#first").hide();
+		});
 
-		// $("#b2").hover(fn1,fn2);	// combines bith mouseenter mouseleave
-		// $("#b1").dblclick(fn1);	double click
-		function fn1() {
-			$("#first").fadeOut(5000); // fadeOut("slow/fast");
-		}
-		function fn2() {
-			$("#first").fadeIn(5000);
-		}
+		$("#b2").click(function() {
+			$("#first").show();
+		});
+
+		$("#b3").click(function() {
+			$("#first").toggle();
+		});
 	});
+
 </script>
 </html>
