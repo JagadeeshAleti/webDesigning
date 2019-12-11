@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Selectors</title>
+	<link rel="stylesheet" type="text/css" href="css/jQuerySelectors.css">
+	<h1>jQuery Selectors</h1>
+</head>
+<body>
+
+	<h3>This is a paragraph outside the divison</h3>
+	<p style="color: green">First paragraph</p>
+	<p style="color: blue">Second paragraph</p>
+	<div id="first" class="mydiv">
+		<p>This is first paragraph in first divison</p>
+		<p>This is second paragraph in first divison</p>
+	</div>
+
+	<div id="second" class="mydiv">
+		<p>This is paragraph in second divison</p>
+	</div>
+
+	<div id="third" class="mydiv">
+		<ul>
+			<li>First Item</li>
+			<li>Second Item</li>
+			<li>Third Item</li>
+			<li>Fourth  Item</li>
+		</ul>
+	</div>
+
+	<div>
+		<li>First Item</li>
+		<li>Second Item</li>
+		<li>Third Item</li>
+		<li>Fourth Item</li>
+	</div>
+	<br>
+	<button onclick="modify()">click Here</button>
+		
+</body>
+<script type="text/javascript" src="jQuery.js"></script>
+<script type="text/javascript">
+	function modify() {
+		// $("#first,#second").fadeToggle(3000); 1st,2nd divisons faded
+		// $("#first,p").fadeToggle(3000); 1st divison faded , and para in 2nd divison faded 
+		// $("#first,p,li").fadeToggle(3000);
+		// $(".mydiv,p").fadeToggle(3000);
+		// $("div > p").fadeToggle();  // parent > child || div > p == div p
+		// $('p:first').fadeToggle(3000); // hodes 1st paragraph
+		// $(".mydiv:even").fadeToggle(3000); // fades even numbered elements
+		$("li:even").fadeToggle(3000); 
+	}
+</script>
+</html>
