@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Effects</title>
+	<link rel="stylesheet" type="text/css" href="css/jQuerySelectors.css">
+	<h1>jQuery Effects</h1>
+</head>
+<body>
+
+	<button id="b1" >Button1</button>
+	<button id="b2">Button2</button>
+	<button id="b3">Toggle</button>
+	
+	<h3>This is a paragraph outside the divison</h3>
+	
+	<p style="color: green">First paragraph</p>
+	<p style="color: blue">Second paragraph</p>
+	
+	<div id="first" class="mydiv">
+		<p>This is first paragraph in first divison</p>
+		<p>This is second paragraph in first divison</p>
+	</div>
+
+	<div id="second" class="mydiv">
+		<p>This is paragraph in second divison</p>
+	</div>
+
+	<div id="third" class="mydiv">
+		<ul>
+			<li>First Item</li>
+			<li>Second Item</li>
+			<li>Third Item</li>
+			<li>Fourth  Item</li>
+		</ul>
+	</div>
+
+	<div>
+		<li>First Item</li>
+		<li>Second Item</li>
+		<li>Third Item</li>
+		<li>Fourth Item</li>
+	</div>
+	<br>
+		
+</body>
+<script type="text/javascript" src="jQuery.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#b1").click(function() {
+			$("#first").slideUp();
+		});
+
+		$("#b2").click(function() {
+			$("#first").slideDown();
+		});
+
+		$("#b3").click(function() {
+			$("#first").slideoggle();
+		});
+	});
+
+</script>
+</html>

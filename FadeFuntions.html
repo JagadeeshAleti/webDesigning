@@ -32,6 +32,7 @@
 			if(opacity<1){
 				opacity += 0.1;
 				img.style.opacity = opacity;
+				// console.log(opacity) to see the current opacity value
 			}
 			else {
 				clearInterval(interval);
@@ -45,5 +46,10 @@
 	<img src="/home/jagadeesh/Downloads/eswar.png" width="300" id="img"> 
 	<br><br>
 	<button onclick="fadeIn()" id="in">FadeIn</button>
+	<!--
+		To set this css use
+			style.opcaity : value;
+			opacity always lies between 0 and 1 
+	--->	
 </body>
 </html>

@@ -11,7 +11,7 @@
 
 		*/
 		function validate() {
-			var text = document.getElementById("number");
+			var text = document.getElementById("number").value;
 			var regx = /^[7-9][0-9]{9}$/;	//^[7-9]\d{9}$ = ^[7-9][0-9]{9}$
 			/*
 				^[7-9] : Start with 7,8,9
@@ -25,6 +25,7 @@
 
 			}
 			else {
+				document.getElementById("numberLabel").innerHTML = "Invalid";
 				document.getElementById("numberLabel").style.visibility = "visible";
 				document.getElementById("numberLabel").style.color = "red";
 			}
