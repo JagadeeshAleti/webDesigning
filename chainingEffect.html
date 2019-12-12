@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Effects</title>
+	<link rel="stylesheet" type="text/css" href="css/jQuerySelectors.css">
+</head>
+<body>
+
+	<h3>chaining Effect in jQuery</h3>
+	
+	<button id="button">Toggle</button>
+	<br><br>
+	<div id="first" class="mydiv">
+		<p>This is first paragraph in first divison</p>
+		<p>This is second paragraph in first divison</p>
+	</div>
+	<br>
+	<div id="second" class="mydiv">
+		<p>This is paragraph in second divison</p>
+	</div>
+
+		
+</body>
+<script type="text/javascript" src="jQuery.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {	
+		function msg() {
+			alert("effect done");
+		}
+		$("#button").click(function() {
+			/* 
+				$("#first").slideUp(2000);
+				$("#first").slideDown(2000);	//This is equal to below second line
+			*/
+			$("#first").slideUp(2000).slideDown(2000).fadeOut(1000).fadeIn(5000); // This is chaining effect using all attributes at a time (Functionality : left --> right)
+			$("#second").slideUp(2000).slideDown(2000);
+
+
+		});
+	});
+</script>
+</html>
