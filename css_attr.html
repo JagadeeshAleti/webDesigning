@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>DOM Manipulations</title>
+	<link rel="stylesheet" type="text/css" href="css/jQuerySelectors.css">
+</head>
+
+<body>
+	<h2>DOM Manipulation - text()</h2>
+	<button id="b1">Action</button>
+	<br><br>
+	<div id="div1">
+		<p>This is <b>First</b> paragraph in <i>First</i> divison</p>
+	</div>
+	<p class="paragraph" style="color: rgb(180,200,114);">This is another paragraph</p>
+</body>
+
+<script type="text/javascript" src="jQuery.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {	
+		$("#b1").click(function() {
+		
+			alert($("#div1").attr('id'));
+			alert($(".paragraph").attr('class'));
+			alert($(".paragraph").css('color'));
+			alert($(".paragraph").css('font-family'));
+		});
+	});
+</script>
+</html>

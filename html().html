@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>DOM Manipulations</title>
+	<link rel="stylesheet" type="text/css" href="css/jQuerySelectors.css">
+</head>
+
+<body>
+	<h2>DOM Manipulation - html()</h2>
+	<button id="b1">Action</button>
+	<br><br>
+	<div id="div1">
+		<p>This is <b>First</b> paragraph in <i>First</i> divison</p>
+	</div>
+
+	<div id="div2">
+		<p>This <b>First</b> paragraph in <i>Second</i> divison</p>
+	</div>
+
+</body>
+
+<script type="text/javascript" src="jQuery.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {	
+		$("#b1").click(function() {
+			alert($("#div1").html());
+			$("#div2").html("Welcome to <b>lazy</b> world!!!!!");
+		});
+	});
+</script>
+</html>
