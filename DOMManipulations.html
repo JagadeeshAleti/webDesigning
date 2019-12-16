@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM Manipulations</title>
+</head>
+<body>
+	<h2>DOM Manipulations to change attribute Value</h2>
+
+	<button id="b1" >setValue</button>
+	<button id="b2" >getValue</button>
+
+	<div style="border: 2px solid grey;margin: 10px;text-align: center;" >
+		<p id="para" class="Paragraph">This is the <b>First</b> Paragraph in <i>First</i> divison</p>
+	</div>
+</body>
+<script type="text/javascript" src="jQuery.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {	
+		$("#b1").click(function() {
+			$("#para").attr("class","Hai");
+			$("#para").css("color","darkcyan");
+			alert("class value changed to Paragraph  to Hai");
+			alert("click getValue to see the class name");
+		});
+		$("#b2").click(function() {
+			alert($("#para").attr("class"));
+			alert($("#para").css("color"));
+		});
+	});
+</script>
+</html>
