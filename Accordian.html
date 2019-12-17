@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQueryUI</title>
+	<link rel="stylesheet" type="text/css" href="css/style1.css">
+	<link rel="stylesheet" type="text/css" href="jqueryui/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="jqueryui/jquery-ui.structure.css">
+	<link rel="stylesheet" type="text/css" href="jqueryui/jquery-ui.theme.css">
+</head>
+<body>
+	<h2>jQuery UI - Accordian</h2>
+	<div id="panels">
+		<h3>Telusko learnings</h3>
+		<p>50k subscribers
+			Note :
+			A big tutors are there , 
+			great previlage to work with
+			intilligence 
+			wait something is nothing a great better than the others and we see the content about this lecture on the netx class and we aer trying to build up ur career and we have do enchance some changes in the society
+			nothing is impossible . thats it video for the guys and see u later byee
+		</p>
+
+		<h3>Webech learnings</h3>
+		<p>1million subscribers</p>
+
+		<h3>NewBoston Tutors</h3>
+		<p>5million subscribers</p>
+
+		<h3>Tutorials point</h3>
+		<p>17k subscribers</p>
+
+	</div>
+</body>
+<script type="text/javascript" src="jQuery.js"></script> 
+<script type="text/javascript" src="jqueryui/jquery-ui.js"></script> <!-- Alwayz below the jQuery.js file-->
+<script type="text/javascript">
+	$("#panels").accordion({
+		collapsible: true, //comment it out and observe the change in the first one
+		event: "mouseover",//click
+		animate: 2000,
+		active: 2,		// defaultly opens specified number text , by default it is zero
+		heightStyle:true, // compare the first one space and 2nd space
+		icons:{header:"ui-icon-plus",activeHeader:"ui-icon-minus"}
+
+	});
+</script>
+</html>

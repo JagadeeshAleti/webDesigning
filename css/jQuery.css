@@ -1,0 +1,25 @@
+#first {
+	font-size: 25pt;
+	font-weight: bold;
+	font-style: timesnewroman;
+}
+#second {
+	color: black;
+	font-size: 20pt;
+	font-weight: normal;
+	font-style: oblique;
+}
+#third {
+	color: blue;
+	font-size: 15pt;
+	font-weight: 900;
+	font-style: italic;
+}
+.Second{
+	background: grey;
+	border: solid 2px brown;
+}
+
+div p {
+	color: darkcyan;
+}

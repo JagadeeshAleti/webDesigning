@@ -1,0 +1,31 @@
+.mydiv {
+	border: 2px solid green;
+	margin: 5px;
+	padding: 10px;
+}
+
+.mycube {
+	width: 50px;
+	height: 50px;
+	background-color: blueviolet;
+	opacity: 0.4;
+	position: absolute;
+	padding: 20px;
+	color: blue;
+}
+
+#div1 {
+	border: 2px solid grey;
+	color: darkcyan;
+	margin: 5px;
+	padding: 5px;
+}
+
+#div2 {
+	border: 2px solid green;
+	color: black;
+	margin: 70px;
+	padding: 5px;
+	background-color: light grey;
+}
+

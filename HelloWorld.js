@@ -1,0 +1,1 @@
+document.write("Hello World! welcome to java script,,it's easy!!!");

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQueryUI</title>
+	<link rel="stylesheet" type="text/css" href="css/style1.css">
+	<link rel="stylesheet" type="text/css" href="jqueryui/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="jqueryui/jquery-ui.structure.css">
+	<link rel="stylesheet" type="text/css" href="jqueryui/jquery-ui.theme.css">
+</head>
+<body>
+	<h2>jQuery UI - DatePicker()</h2>
+	<div id="mydiv">
+		<h3>Introduction to jQuery UI</h3>
+		<input type="text" id="dateInput" placeholder="click to select date">
+	</div>
+</body>
+<script type="text/javascript" src="jQuery.js"></script> 
+<script type="text/javascript" src="jqueryui/jquery-ui.js"></script> <!-- Alwayz below the jQuery.js file-->
+<script type="text/javascript">
+	//$("#dateInput").datepicker();
+	//$("#dateInput").datepicker( {numberOfMonths:3,});
+	$("#dateInput").datepicker({
+		changeYear:true,
+		changeMonth:true,
+		showWeek:true,
+		weekHeader:"wk no",
+		showOtherMonths:true,
+		minDate: new Date(2015,0,15),
+		maxDate: new Date(2020,11,25)
+	});
+</script>
+</html>
