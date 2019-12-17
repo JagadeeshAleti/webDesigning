@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQueryUI</title>
+	<link rel="stylesheet" type="text/css" href="css/style2.css">
+	<link rel="stylesheet" type="text/css" href="jqueryui/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="jqueryui/jquery-ui.structure.css">
+	<link rel="stylesheet" type="text/css" href="jqueryui/jquery-ui.theme.css">
+</head>
+<body>
+	<h2>jQuery UI - Auto complete Widget</h2>
+	<div id="mydiv">
+		<label><b>Enter your Favorite</b></label>
+		<input type="text" name="" id="city">
+	</div>
+	
+</body>
+<script type="text/javascript" src="jQuery.js"></script> 
+<script type="text/javascript" src="jqueryui/jquery-ui.js"></script> <!-- Alwayz below the jQuery.js file-->
+<script type="text/javascript">
+	var mycities = ['Paris','Mubai','Loss angels','NewYork','Calfornia','Hyderabd','Italy','Rom','Switerland','NewDelhi','New Jersey','Pune']
+	$("#city").autocomplete({
+		source: mycities
+	},
+	{
+		autoFocus: true,
+		delay: 0,	// Suggestion are appeared at mentioned time
+		minLength: 2,	// suggestion appear when u atleast enter 2 cahracters
+	});
+</script>
+</html>
