@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQueryUI</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/style1.css">
+	<link rel="stylesheet" type="text/css" href="css/style2.css">
+	<link rel="stylesheet" type="text/css" href="jqueryuiTheme/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="jqueryuiTheme/jquery-ui.structure.css">
+	<link rel="stylesheet" type="text/css" href="jqueryuiTheme/jquery-ui.theme.css">
+</head>
+<body>
+	<h2>jQuery UI - Widget</h2>
+	<button onclick="modify()">change</button>
+	<br><br>
+	<div id="dateInput" title="calender">
+	</div>
+
+	<div id="messagebox" title="" class="mydiv">
+		<h3>This is a just dummy title, okkkk</h3>
+	</div>
+
+	<div id="panels">
+		<h3>Telusko learnings</h3>
+		<p>50k subscribers</p>
+
+		<h3>Webech learnings</h3>
+		<p>1million subscribers</p>
+
+		<h3>NewBoston Tutors</h3>
+		<p>5million subscribers</p>
+
+		<h3>Tutorials point</h3>
+		<p>17k subscribers</p>
+
+	</div>
+</body>
+<script type="text/javascript" src="jQuery.js"></script> 
+<script type="text/javascript" src="jqueryuiTheme/jquery-ui.js"></script> <!-- Alwayz below the jQuery.js file-->
+<script type="text/javascript">
+	function modify() {
+		//var height = $( "#messagebox" ).dialog( "option", "height" );
+		//alert();
+		$( "#messagebox" ).dialog( "option", "height", 600 );
+		$( "#messagebox" ).dialog( "option", "draggable", false );
+		$( "#messagebox" ).dialog( "option", "resizable", false );
+		$( "#dateInput" ).datepicker( "option", "numberOfMonths", 3 );
+
+	}
+	$(document).ready(function() {
+
+		$("#dateInput").datepicker({
+			numberOfMonths: 1,
+			changeYear:true,
+			changeMonth:true,
+			showWeek:true,
+			weekHeader:"wk no",
+			showOtherMonths:true,
+			minDate: new Date(2015,0,15),
+			maxDate: new Date(2020,11,25)
+		});
+
+		$("#messagebox").dialog({
+			title: "custom messageBox",
+			draggable: true,	
+			resizable: true,
+			height: 300, 
+			width: 300,
+			modal: false,
+		});
+
+		$("#panels").accordion({
+			collapsible: true,
+			event: "click",
+			animate: 300,
+			active: 0,		
+			heightStyle:true, 
+			icons:{header:"ui-icon-plus",activeHeader:"ui-icon-minus"}
+		});
+
+});
+</script>
+</html>

@@ -1,0 +1,12 @@
+.cube {
+	width: 100px;
+	height: 100px;
+	background-color: darkcyan;
+	padding: 5px;
+	margin: 20px;
+	border: 2px solid grey;
+	display: inline-block;
+}
+#nivas {
+	padding: 25px;
+}

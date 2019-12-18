@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQueryUI</title>
+	<link rel="stylesheet" type="text/css" href="css/style3.css">
+	<link rel="stylesheet" type="text/css" href="jqueryui/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="jqueryui/jquery-ui.structure.css">
+	<link rel="stylesheet" type="text/css" href="jqueryui/jquery-ui.theme.css">
+</head>
+<body>
+	<h2>jQuery UI - ResizebleInteraction</h2>
+	<div id="mydiv" style="border: 1px solid black;padding: 10px;margin: 10px;">
+		<img src="/home/jagadeesh/Downloads/eswar.png" style="height:10%; width:10%;" id="jaggu">
+	</div>
+</body>
+<script type="text/javascript" src="jQuery.js"></script> 
+<script type="text/javascript" src="jqueryui/jquery-ui.js"></script> <!-- Alwayz below the jQuery.js file-->
+<script type="text/javascript">
+	$("#jaggu").resizable({
+		//maxWidth: 500,
+		//maxeight: 500,
+		distance: 200,	// After this distance the image is draggable
+		autoHide: true,	// Disable small icone at the bottom corner of the pic
+		ghost: true,	// you have seen two images one is original and other is with less opacity
+		aspectRatio: true // you have drag the image with predefined size , if false you can  
+	});
+</script>
+</html>

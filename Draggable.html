@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQueryUI</title>
+	<link rel="stylesheet" type="text/css" href="css/style3.css">
+	<link rel="stylesheet" type="text/css" href="jqueryui/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="jqueryui/jquery-ui.structure.css">
+	<link rel="stylesheet" type="text/css" href="jqueryui/jquery-ui.theme.css">
+</head>
+<body>
+	<h2>jQuery UI - Draggable</h2>
+	<div style="border: 1px solid grey;">
+		<div class="cube" id="cube1">
+			<h3 style="text-align: center;">CUBE1</h3>
+		</div>
+		<div class="cube" id="cube2">
+			<h3 style="text-align: center;">CUBE2</h3>
+		</div>
+	</div>
+	
+</body>
+<script type="text/javascript" src="jQuery.js"></script> 
+<script type="text/javascript" src="jqueryui/jquery-ui.js"></script> <!-- Alwayz below the jQuery.js file-->
+<script type="text/javascript">
+	$("#cube1").draggable({
+		axis: "x",	// Moves along x-axis
+		containment: "document",
+		grid:[300,300]	// Directly it will move cube 300px at a time
+	});
+	$("#cube2").draggable({
+		axis: "y",	// Moves along y-axis
+		containment: "parent",	// doesnt move outside the specified border (document is other option)
+		cursor: "grabbbing",
+		opacity: 0.5,
+		snap: true,	// for sticking the other
+		snapTolerance: 10 // stick to the other element when the distance is 10
+
+	});
+</script>
+</html>

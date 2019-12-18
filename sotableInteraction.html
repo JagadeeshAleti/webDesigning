@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQueryUI</title>
+	<link rel="stylesheet" type="text/css" href="css/style3.css">
+	<link rel="stylesheet" type="text/css" href="jqueryui/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="jqueryui/jquery-ui.structure.css">
+	<link rel="stylesheet" type="text/css" href="jqueryui/jquery-ui.theme.css">
+</head>
+<body>
+	<h2>jQuery UI - SortableInteraction</h2>
+	<div style="border: 1px solid grey;" id="mydiv">
+		<div class="cube" id="cube1">
+			<h3 style="text-align: center;">CUBE1</h3>
+		</div>
+		<div class="cube" id="cube2">
+			<h3 style="text-align: center;">CUBE2</h3>
+		</div>
+		<div class="cube" id="cube3">
+			<h3 style="text-align: center;">CUBE3</h3>
+		</div>
+		<img src="/home/jagadeesh/Downloads/jagadeesh.jpg" style="height:10%; width:10%;" id="nivas">
+	</div>
+	
+</body>
+<script type="text/javascript" src="jQuery.js"></script> 
+<script type="text/javascript" src="jqueryui/jquery-ui.js"></script> <!-- Alwayz below the jQuery.js file-->
+<script type="text/javascript">
+	$("#mydiv").sortable({
+		opacity: 0.5,
+		distance: 50,	//The cubes can be sorted when you drag minimum of distance 50
+		delay: 300,
+		containment: "parent",	//movement of subelemtns is possible in only in the divison
+		cursor: "grabbing"
+	});
+</script>
+</html>
